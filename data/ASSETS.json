@@ -1,0 +1,7 @@
+{
+  "schema": "enforcement-evidence/2",
+  "format": "plain-files",
+  "manifest": "data/EVIDENCE_SHA256.json",
+  "total_files": 89092,
+  "dataset_revision": "f8cd72cf7fbbfebc809c454667eee271706a4b2b"
+}

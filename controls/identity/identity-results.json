@@ -1,0 +1,816 @@
+{
+  "authored_families": 1,
+  "blanket_precompile_exclusion_falsified": true,
+  "compiler_configurations": 1,
+  "compiler_sha256": "6bd9bb0a601e791692358037b5558deba15f970d82de56d030c6eab0d1e28d67",
+  "executions": 96,
+  "passed": true,
+  "problems": [],
+  "py_evm_identity_source": "def identity(computation: ComputationAPI) -> ComputationAPI:\n    word_count = ceil32(len(computation.msg.data)) // 32\n    gas_fee = constants.GAS_IDENTITY + word_count * constants.GAS_IDENTITYWORD\n\n    computation.consume_gas(gas_fee, reason=\"Identity Precompile\")\n\n    computation.output = computation.msg.data_as_bytes\n    return computation\n",
+  "records": [
+    {
+      "enforce": false,
+      "expected_identity_gas": 15,
+      "expected_inner_success": false,
+      "forwarded_gas": 0,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 0
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 15,
+      "expected_inner_success": false,
+      "forwarded_gas": 0,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 0
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 15,
+      "expected_inner_success": false,
+      "forwarded_gas": 14,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 0
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 15,
+      "expected_inner_success": false,
+      "forwarded_gas": 14,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 0
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 15,
+      "expected_inner_success": true,
+      "forwarded_gas": 15,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        }
+      ],
+      "words": 0
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 15,
+      "expected_inner_success": true,
+      "forwarded_gas": 15,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        }
+      ],
+      "words": 0
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 15,
+      "expected_inner_success": true,
+      "forwarded_gas": 115,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        }
+      ],
+      "words": 0
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 15,
+      "expected_inner_success": true,
+      "forwarded_gas": 115,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": true
+        }
+      ],
+      "words": 0
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 18,
+      "expected_inner_success": false,
+      "forwarded_gas": 0,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 1
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 18,
+      "expected_inner_success": false,
+      "forwarded_gas": 0,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 1
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 18,
+      "expected_inner_success": false,
+      "forwarded_gas": 17,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 1
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 18,
+      "expected_inner_success": false,
+      "forwarded_gas": 17,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 1
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 18,
+      "expected_inner_success": true,
+      "forwarded_gas": 18,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 1
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 18,
+      "expected_inner_success": true,
+      "forwarded_gas": 18,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 1
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 18,
+      "expected_inner_success": true,
+      "forwarded_gas": 118,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 1
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 18,
+      "expected_inner_success": true,
+      "forwarded_gas": 118,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 1
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 111,
+      "expected_inner_success": false,
+      "forwarded_gas": 0,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 32
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 111,
+      "expected_inner_success": false,
+      "forwarded_gas": 0,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 32
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 111,
+      "expected_inner_success": false,
+      "forwarded_gas": 110,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 32
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 111,
+      "expected_inner_success": false,
+      "forwarded_gas": 110,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 32
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 111,
+      "expected_inner_success": true,
+      "forwarded_gas": 111,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 32
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 111,
+      "expected_inner_success": true,
+      "forwarded_gas": 111,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 32
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 111,
+      "expected_inner_success": true,
+      "forwarded_gas": 211,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 32
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 111,
+      "expected_inner_success": true,
+      "forwarded_gas": 211,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 32
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 783,
+      "expected_inner_success": false,
+      "forwarded_gas": 0,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 256
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 783,
+      "expected_inner_success": false,
+      "forwarded_gas": 0,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 256
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 783,
+      "expected_inner_success": false,
+      "forwarded_gas": 782,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 256
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 783,
+      "expected_inner_success": false,
+      "forwarded_gas": 782,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        },
+        {
+          "outer_status": 0,
+          "stored_copy": "0x0",
+          "stored_success": false
+        }
+      ],
+      "words": 256
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 783,
+      "expected_inner_success": true,
+      "forwarded_gas": 783,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 256
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 783,
+      "expected_inner_success": true,
+      "forwarded_gas": 783,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 256
+    },
+    {
+      "enforce": false,
+      "expected_identity_gas": 783,
+      "expected_inner_success": true,
+      "forwarded_gas": 883,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 256
+    },
+    {
+      "enforce": true,
+      "expected_identity_gas": 783,
+      "expected_inner_success": true,
+      "forwarded_gas": 883,
+      "identical": true,
+      "observations": [
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        },
+        {
+          "outer_status": 1,
+          "stored_copy": "0xfeed00000000000000000000000000000000000000000000000000000000beef",
+          "stored_success": true
+        }
+      ],
+      "words": 256
+    }
+  ],
+  "runtime_sha256": "d8ec918a4fc9008e037d66129d6938c7ad1b6c00a0ad7120a4404c7c10bf7918",
+  "scenarios": 32,
+  "scope": "one authored semantic control family; no benchmark-label change and no independent natural-case validation",
+  "source_sha256": "d99981c11e5f3d1b835cb027544cdaa81e022751caf8db65570ced29f3a09cb2"
+}

@@ -1,0 +1,5 @@
+eth-tester==0.13.0b1
+py-evm==0.12.1b1
+eth-account==0.13.7
+eth-abi==5.2.0
+eth-utils==5.3.1

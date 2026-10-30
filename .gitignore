@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+.tools/
+.serena/
+graphify-out/
+/runs/
+# Large local benchmark inputs and recorded evidence are not part of the source release.
+/experiments/
+/results/views/
+/results/securify/
+/support/upstream/
+/support/semantic-evidence/
+/data/*
+!/data/ASSETS.json
+!/data/EVIDENCE_SHA256.json
+tools/solc/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+
+# Keep this repository limited to experiment reproduction.
+/paper/
+*.zip
+*.pdf
+*.tex
+*.bib
+*.cls
+*.bst

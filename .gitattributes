@@ -1,0 +1,6 @@
+# Preserve byte identities of source, facts and experimental evidence on every platform.
+* -text
+experiments/** linguist-generated=true
+results/** linguist-generated=true
+support/upstream/** linguist-vendored=true
+support/native-tools/** linguist-vendored=true

@@ -1,0 +1,18 @@
+{
+  "mapping_disjoint_constant_key": {
+    "expected": "negative",
+    "facts": "D:\\MSCS\\S3\\IS\\crypto-paper\\experiments\\credential-strengthening-20261029-working\\controls\\mapping\\mapping_disjoint_constant_key"
+  },
+  "mapping_guarded_writer": {
+    "expected": "negative",
+    "facts": "D:\\MSCS\\S3\\IS\\crypto-paper\\experiments\\credential-strengthening-20261029-working\\controls\\mapping\\mapping_guarded_writer"
+  },
+  "mapping_other_base_slot": {
+    "expected": "negative",
+    "facts": "D:\\MSCS\\S3\\IS\\crypto-paper\\experiments\\credential-strengthening-20261029-working\\controls\\mapping\\mapping_other_base_slot"
+  },
+  "mapping_unrestricted_chosen_key": {
+    "expected": "positive",
+    "facts": "D:\\MSCS\\S3\\IS\\crypto-paper\\experiments\\credential-strengthening-20261029-working\\controls\\mapping\\mapping_unrestricted_chosen_key"
+  }
+}

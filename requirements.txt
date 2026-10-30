@@ -1,0 +1,2 @@
+# Core verification, scoring, static analysis and authored controls use Python 3.11+ standard library.
+# See requirements-evm.txt for the separate concrete-execution environment.

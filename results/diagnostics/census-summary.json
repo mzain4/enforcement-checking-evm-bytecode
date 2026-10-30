@@ -1,0 +1,385 @@
+{
+  "by_property": {
+    "104": {
+      "FN_abstained": 26,
+      "FN_decisive": 31,
+      "FP": 287,
+      "TN": 614,
+      "TP": 247,
+      "abstained_negative": 155,
+      "disputed_reference": 19
+    },
+    "105": {
+      "FN_abstained": 0,
+      "FN_decisive": 1,
+      "FP": 1,
+      "TN": 4,
+      "TP": 7,
+      "abstained_negative": 0,
+      "disputed_reference": 0
+    },
+    "115": {
+      "FN_abstained": 3,
+      "FN_decisive": 10,
+      "FP": 1,
+      "TN": 1193,
+      "TP": 8,
+      "abstained_negative": 93,
+      "disputed_reference": 0
+    }
+  },
+  "cells": 2700,
+  "error_runtime_examples": {
+    "No public function dispatch found": [
+      "050c2462eed3eeef1f3dd84252aa89b306f20bb5917a4b84f14fe9a22bdd8d91",
+      "267bdeb16ce226f778de5955b18491c818d446057ce214b8c353a29dcf080106",
+      "2ec85391d592a962df5be969b131e989c9bd1489fb9287e0796378e0105cde5e",
+      "4ca111415d257003436f88a38aa45b404f208a2194a9ec08654980a816a5806b",
+      "7f4a12a63e9ab0a9e9b398eef2a820cd04dc2be9ff10f494075f64d1003ed26d",
+      "8112104c66f4e2acfaaeb14f3443e55aff2b68e9fa34beec3da1481f4fefa755",
+      "bda122949b1c2fab19c1abea0cbca311578e3095387d4a96d1276205a292f797",
+      "c14240667626cac338f178b75a2a0188b64538b405ff4b6a1f056001fa032117",
+      "c5671997a61ae6b78d2b3d49112046efe8eb3717775c4a7da61307013b4bf35a",
+      "d55740b83e42ccd82fb981584d18f6942e2020cad743c0c4776e36be71b7ae24",
+      "dd8bbb16414e478cb90a2bf5fe1fb963cb803499a5477a4b68dc48021cd17de0",
+      "eb04cef08cdddee4f09d3b6f9e1293eece8503f9b6155a85e6b7b9aba70d080f"
+    ],
+    "ValueError: No dispatcher entry": [
+      "9c67e7c813dda7ef9219b396120bd79005793cae87975cca426e517922ae29ca"
+    ],
+    "ValueError: Noncontiguous operand indices: 0x1822": [
+      "42c4476d13a8ebfb68e5be2243b01a35d02b7eeecf80a9d5fbc01cac90f34aa6"
+    ],
+    "ValueError: Noncontiguous operand indices: 0x7940x0": [
+      "825e5f6a2ef77ed97e6d81ee88c3a4de645a989ee7cc11737c4868438148b399"
+    ],
+    "ValueError: Noncontiguous operand indices: 0x849": [
+      "59925f1c9524296f229fd34a3315a0c42041e4df6780714707a3bdff06bfd5fb"
+    ],
+    "ValueError: Noncontiguous operand indices: 0x9480x11a0": [
+      "44eda92f6b0d6d604db2ea59f690b6d29cda998d324e3c0e543deaa01da3e715"
+    ],
+    "ValueError: Noncontiguous operand indices: 0x9720x11e9": [
+      "bd40e54e7eebe03d3c030688b42adec2131ad46be2326451ba4e29401ce52159"
+    ],
+    "ValueError: Repeated block ID": [
+      "37e491229069a6a94da8264b9cafd8126db9f2d1d7e1e11c7754043a221c3dc4",
+      "a9bfdae8790eff0fed8462cc059bd439e80403b68e6db36346098945f7aabbb9"
+    ],
+    "ValueError: Repeated positional operand index: 0x18eb0x18a4": [
+      "c4bce42f5ebfd6dbefbe98de67529c0142a58fc25f71f254748489c09429f2b8"
+    ],
+    "ValueError: Repeated positional operand index: 0x197b0x1931": [
+      "7d73bf3b09322a85e37a0a34ccb35458bc6ee38999394f7819ef80db524fb8aa"
+    ],
+    "ValueError: Repeated positional operand index: 0xe0c0xdc70x837": [
+      "eba6ffaf71d37b59ccfd51d8885dd2894aa2b53f377c9ce65740e9e501c0a74d"
+    ],
+    "ValueError: Repeated positional operand index: 0xfbe0xf0b0xd700x7ee0x2a1": [
+      "00573a5a35cc509d5a4cc0926e515040a026653ed9092ffd2a918c8749772cc2"
+    ]
+  },
+  "input_hash": "69503c1959a8f64aa07c9053001a06cfdc4d981299a742fe5a255c370f323ef1",
+  "original_reference_hash": "9474965dc668392a5d79cb8ae9087fe43d31b1e9638d4c4befdd5f536d261c77",
+  "outcomes": {
+    "FN_abstained": 29,
+    "FN_decisive": 43,
+    "FP": 289,
+    "TN": 1811,
+    "TP": 261,
+    "abstained_negative": 248,
+    "disputed_reference": 19
+  },
+  "runtimes": 1431,
+  "status": "complete machine census; causal/human review separate",
+  "top_reasons": [
+    {
+      "cells": 271,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FP",
+      "reason": "result never read"
+    },
+    {
+      "cells": 91,
+      "machine_triage": "preprocessing_unavailable",
+      "outcome": "abstained_negative",
+      "reason": "preprocessing unavailable"
+    },
+    {
+      "cells": 58,
+      "machine_triage": "unresolved_analysis_context",
+      "outcome": "abstained_negative",
+      "reason": "the successful path can reach the failure continuation through a cycle; effects cannot be attributed without path conditions"
+    },
+    {
+      "cells": 22,
+      "machine_triage": "no_public_dispatch",
+      "outcome": "abstained_negative",
+      "reason": "No public function dispatch found"
+    },
+    {
+      "cells": 21,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FN_decisive",
+      "reason": "no obligation reached the positive condition"
+    },
+    {
+      "cells": 18,
+      "machine_triage": "unresolved_analysis_context",
+      "outcome": "abstained_negative",
+      "reason": "call-result branch cannot be reduced to a zero test"
+    },
+    {
+      "cells": 14,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FP",
+      "reason": "result is read but no branch depends on it"
+    },
+    {
+      "cells": 14,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "disputed_reference",
+      "reason": "result never read"
+    },
+    {
+      "cells": 12,
+      "machine_triage": "capability_unsupported",
+      "outcome": "abstained_negative",
+      "reason": "TSTORE not validated in this frontend"
+    },
+    {
+      "cells": 11,
+      "machine_triage": "preprocessing_unavailable",
+      "outcome": "FN_abstained",
+      "reason": "preprocessing unavailable"
+    },
+    {
+      "cells": 10,
+      "machine_triage": "capability_unsupported",
+      "outcome": "abstained_negative",
+      "reason": "PUSH0 not modeled by inherited frontend"
+    },
+    {
+      "cells": 9,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FN_decisive",
+      "reason": "no ORIGIN in the analysed function"
+    },
+    {
+      "cells": 7,
+      "machine_triage": "unresolved_analysis_context",
+      "outcome": "abstained_negative",
+      "reason": "analysis did not complete the property scope"
+    },
+    {
+      "cells": 6,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FN_decisive",
+      "reason": "failure takes a different branch with its own effects"
+    },
+    {
+      "cells": 5,
+      "machine_triage": "unresolved_analysis_context",
+      "outcome": "FN_abstained",
+      "reason": "the successful path can reach the failure continuation through a cycle; effects cannot be attributed without path conditions"
+    },
+    {
+      "cells": 4,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FN_decisive",
+      "reason": "failure outcome is rejected on its own path"
+    },
+    {
+      "cells": 4,
+      "machine_triage": "capability_unsupported",
+      "outcome": "FN_abstained",
+      "reason": "MCOPY not validated in this frontend"
+    },
+    {
+      "cells": 4,
+      "machine_triage": "capability_unsupported",
+      "outcome": "abstained_negative",
+      "reason": "MCOPY not validated in this frontend"
+    },
+    {
+      "cells": 3,
+      "machine_triage": "capability_unsupported",
+      "outcome": "FN_abstained",
+      "reason": "TLOAD not validated in this frontend"
+    },
+    {
+      "cells": 3,
+      "machine_triage": "capability_unsupported",
+      "outcome": "abstained_negative",
+      "reason": "TLOAD not validated in this frontend"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "frontend_operand_ambiguity",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Repeated positional operand index: 0xfbe0xf0b0xd700x7ee0x2a1"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "analysis_error",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Repeated block ID"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "capability_unsupported",
+      "outcome": "FN_abstained",
+      "reason": "PUSH0 not modeled by inherited frontend"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "analysis_error",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Noncontiguous operand indices: 0x1822"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "analysis_error",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Noncontiguous operand indices: 0x9480x11a0"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "analysis_error",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Noncontiguous operand indices: 0x849"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "frontend_operand_ambiguity",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Repeated positional operand index: 0x197b0x1931"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "analysis_error",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Noncontiguous operand indices: 0x7940x0"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "analysis_error",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Noncontiguous operand indices: 0x9720x11e9"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "frontend_operand_ambiguity",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Repeated positional operand index: 0x18eb0x18a4"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FN_decisive",
+      "reason": "an identity or limit guard dominates the transfer"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "capability_unsupported",
+      "outcome": "abstained_negative",
+      "reason": "PUSH0 not modeled by inherited frontend; TSTORE not validated in this frontend"
+    },
+    {
+      "cells": 2,
+      "machine_triage": "frontend_operand_ambiguity",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: Repeated positional operand index: 0xe0c0xdc70x837"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FP",
+      "reason": "public entry can overwrite the complete guarding credential field"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FP",
+      "reason": "origin identity check gates an effect"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FP",
+      "reason": "failure continues to the same effects as success"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FN_decisive",
+      "reason": "origin is only compared with the caller"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "no_public_dispatch",
+      "outcome": "disputed_reference",
+      "reason": "No public function dispatch found"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "preprocessing_unavailable",
+      "outcome": "disputed_reference",
+      "reason": "preprocessing unavailable"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "disputed_reference",
+      "reason": "no obligation reached the positive condition"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "analysis_error",
+      "outcome": "FN_abstained",
+      "reason": "ValueError: No dispatcher entry"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "analysis_error",
+      "outcome": "abstained_negative",
+      "reason": "ValueError: No dispatcher entry"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "analysis_error",
+      "outcome": "FN_abstained",
+      "reason": "ValueError: Repeated block ID"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "unresolved_analysis_context",
+      "outcome": "FN_abstained",
+      "reason": "origin influences a branch whose identity operand is not established"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "reference_analysis_disagreement_requires_review",
+      "outcome": "FP",
+      "reason": "failure takes a differentiated path with no effect of its own"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "unresolved_analysis_context",
+      "outcome": "disputed_reference",
+      "reason": "call-result branch cannot be reduced to a zero test"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "no_public_dispatch",
+      "outcome": "FN_abstained",
+      "reason": "No public function dispatch found"
+    },
+    {
+      "cells": 1,
+      "machine_triage": "unresolved_analysis_context",
+      "outcome": "disputed_reference",
+      "reason": "the successful path can reach the failure continuation through a cycle; effects cannot be attributed without path conditions"
+    }
+  ]
+}

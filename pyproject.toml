@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "credential-enforcement"
+version = "1.0.0"
+description = "Dependency-aware enforcement and credential-integrity checking for Ethereum bytecode"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Muhammad Zain Ul Abidin", email = "mzain.mz4@gmail.com"},
+  {name = "Imtiaz Hussain", email = "imtiaz.hussain@skt.umt.edu.pk"},
+  {name = "Intakhab Alam", email = "intakhab.alam@skt.umt.edu.pk"},
+  {name = "Syed Shakeel ur Rehman", email = "shakeelrizvi94@yahoo.com"},
+]
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["implementation*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,25 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "Controls.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity >=0.8.0 <0.9.0;\n\ncontract OpenCaller {\n    address public owner;\n    constructor() { owner = msg.sender; }\n    receive() external payable {}\n    function claim() external { owner = msg.sender; }\n    function withdraw() external { require(msg.sender == owner); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract GuardedCaller {\n    address public owner;\n    constructor() { owner = msg.sender; }\n    receive() external payable {}\n    function claim() external { require(msg.sender == owner); owner = msg.sender; }\n    function withdraw() external { require(msg.sender == owner); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract NeighborField {\n    address public owner;\n    uint96 public counter;\n    constructor() { owner = msg.sender; }\n    receive() external payable {}\n    function claim() external { counter = uint96(uint160(msg.sender)); }\n    function withdraw() external { require(msg.sender == owner); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract ShiftedField {\n    uint96 public counter;\n    address public owner;\n    constructor() { owner = msg.sender; }\n    receive() external payable {}\n    function claim() external { owner = msg.sender; }\n    function withdraw() external { require(msg.sender == owner); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract OpenParameter {\n    address public owner;\n    constructor() { owner = msg.sender; }\n    receive() external payable {}\n    function claim(address next) external { owner = next; }\n    function withdraw() external { require(msg.sender == owner); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract Initialized {\n    address public owner;\n    bool public initialized;\n    constructor() { owner = msg.sender; initialized = true; }\n    receive() external payable {}\n    function claim() external { require(!initialized); owner = msg.sender; initialized = true; }\n    function withdraw() external { require(msg.sender == owner); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract TwoCredentials {\n    address public owner;\n    address public manager;\n    constructor() { owner = msg.sender; manager = msg.sender; }\n    receive() external payable {}\n    function claim() external { owner = msg.sender; }\n    function withdraw() external { require(msg.sender == owner); require(msg.sender == manager); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract NoSetter {\n    address public owner;\n    constructor() { owner = msg.sender; }\n    receive() external payable {}\n    function claim() external {}\n    function withdraw() external { require(msg.sender == owner); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract PartialField {\n    address public owner;\n    constructor() { owner = msg.sender; }\n    receive() external payable {}\n    function claim() external { assembly { sstore(0, or(and(sload(0), not(255)), and(caller(), 255))) } }\n    function withdraw() external { require(msg.sender == owner); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract ExternalSetter {\n    address public owner;\n    constructor() { owner = msg.sender; }\n    receive() external payable {}\n    function claim(address target) external { (bool ok,) = target.call(\"\"); require(ok); owner = msg.sender; }\n    function withdraw() external { require(msg.sender == owner); payable(msg.sender).transfer(address(this).balance); }\n}\ncontract OriginGate {\n    uint256 public count;\n    uint256 public lastCodeSize;\n    function enter() external { require(msg.sender == tx.origin); count++; lastCodeSize = msg.sender.code.length; }\n}\ncontract Forwarder {\n    function run(address target) external { (bool ok,) = target.call(abi.encodeWithSignature(\"enter()\")); require(ok); }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "prague",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object"
+        ]
+      }
+    },
+    "viaIR": false
+  }
+}

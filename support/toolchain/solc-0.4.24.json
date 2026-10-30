@@ -1,0 +1,16 @@
+{
+  "release": {
+    "path": "solc-windows-amd64-v0.4.24+commit.e67f0147.zip",
+    "version": "0.4.24",
+    "build": "commit.e67f0147",
+    "longVersion": "0.4.24+commit.e67f0147",
+    "keccak256": "0x742efc21520455719958b12de128cb1498e18f11c44957d5b85006c5ae3270c7",
+    "sha256": "0x0a9f3620a7c9ab63e92cbeb2a6c5ad1e02c023286576b4e61a9baadfa2fec42e",
+    "urls": [
+      "dweb:/ipfs/QmZfWvRr968XnGN1kvFyLzoLMg3V5u8tbSBiu7jdEJZzqM"
+    ]
+  },
+  "compiler": "tools\\runtime\\solidity\\solc-0.4.24\\solc.exe",
+  "sha256": "ed3adcf61d21a6513b76244dfd3d921515ff974c8c5d5065288a9629b26b4dcc",
+  "version_output": "solc, the solidity compiler commandline interface\nVersion: 0.4.24+commit.6ae8fb59.Windows.msvc\n"
+}

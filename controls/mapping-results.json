@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "results": {
+    "mapping_disjoint_constant_key": {
+      "arms": {
+        "field-integrity": {
+          "105": "negative",
+          "candidates": [],
+          "error": null,
+          "reason": "an identity or limit guard dominates the transfer"
+        },
+        "full": {
+          "105": "negative",
+          "candidates": [],
+          "error": null,
+          "reason": "an identity or limit guard dominates the transfer"
+        }
+      },
+      "expected": "negative",
+      "passed": true
+    },
+    "mapping_guarded_writer": {
+      "arms": {
+        "field-integrity": {
+          "105": "negative",
+          "candidates": [],
+          "error": null,
+          "reason": "an identity or limit guard dominates the transfer"
+        },
+        "full": {
+          "105": "negative",
+          "candidates": [],
+          "error": null,
+          "reason": "an identity or limit guard dominates the transfer"
+        }
+      },
+      "expected": "negative",
+      "passed": true
+    },
+    "mapping_other_base_slot": {
+      "arms": {
+        "field-integrity": {
+          "105": "negative",
+          "candidates": [],
+          "error": null,
+          "reason": "an identity or limit guard dominates the transfer"
+        },
+        "full": {
+          "105": "negative",
+          "candidates": [],
+          "error": null,
+          "reason": "an identity or limit guard dominates the transfer"
+        }
+      },
+      "expected": "negative",
+      "passed": true
+    },
+    "mapping_unrestricted_chosen_key": {
+      "arms": {
+        "field-integrity": {
+          "105": "negative",
+          "candidates": [],
+          "error": null,
+          "reason": "an identity or limit guard dominates the transfer"
+        },
+        "full": {
+          "105": "positive",
+          "candidates": [
+            {
+              "evidence": {
+                "dynamic_base": 1,
+                "effect": "0x805",
+                "effect_function": "withdrawAll",
+                "guard_blocks": [
+                  "0x10"
+                ],
+                "key_control": "chosen",
+                "scope": "candidate over lifted facts; initial-state/path feasibility not proved",
+                "writer": {
+                  "block": "0x70",
+                  "controlled_mask": 1461501637330902918203684832716283019655932542975,
+                  "dynamic_base": 1,
+                  "function": "newOwner",
+                  "instruction": "0x703",
+                  "key_control": "chosen",
+                  "key_variable": "0x701",
+                  "reason": "no dominating authorization/state condition in supported entry",
+                  "status": "unrestricted"
+                }
+              },
+              "reason": "public entry can set the caller-keyed membership credential the guard reads",
+              "status": "positive"
+            }
+          ],
+          "error": null,
+          "reason": "public entry can set the caller-keyed membership credential the guard reads"
+        }
+      },
+      "expected": "positive",
+      "passed": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "archive_sha256": "9ea47eb95aafdfdccd26f70d2ffa4f4ba50f420d965c492963fdce9e6bc54030",
+  "final_statuses": {
+    "error": 2,
+    "ok": 36,
+    "timeout": 16
+  },
+  "native_matches_in_successful_runs": {
+    "COMPLIANT": 71,
+    "VIOLATION": 688,
+    "WARNING": 6
+  },
+  "request_protocol_sha256": "b530413519e69fc5d05542897b0cc53f6ef1fa740cc683558837bf5ed71388b5",
+  "requests": 54,
+  "stale_result_files_ignored": [
+    "credential-securify-batch-20261029/withdrawal/ccc99885c8734dd763c1bbf7f20e2af42288b34e1d14a6da721d291646d9b808/result.json",
+    "credential-securify-batch-20261029/withdrawal/d5b20693315e695740b2be9c3e30927b092344418c2bcfb6a7f0a262310ba901/result.json",
+    "credential-securify-batch-20261029/withdrawal/db46eef3b1e38919501752e34fd913b1bfb95425dd10b42346366f77de7586e8/result.json"
+  ],
+  "successful_requests_with_scoped_violation": 23,
+  "unit": "native match records are not independent vulnerabilities or true positives"
+}

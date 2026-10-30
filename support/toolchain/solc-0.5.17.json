@@ -1,0 +1,7 @@
+{
+  "version": "0.5.17",
+  "compiler": "tools\\runtime\\solidity\\solc-0.5.17\\solc.exe",
+  "sha256": "4db1617288086bd995e058126dce9df19305460e75697e159e503a82bd36e0d2",
+  "version_output": "solc, the solidity compiler commandline interface\nVersion: 0.5.17+commit.d19bba13.Windows.msvc\n",
+  "archive_sha256": "0xb70623f47c66d24ad1aadcdce755d2788fe9cb7000d5c9059e44d5e7fa0060f1"
+}

@@ -1,0 +1,577 @@
+{
+  "schema": "credential-compiled-controls/v1",
+  "source_sha256": "1125f4557a9c5d7b223e54157616533edcffb6ce590d76f3e4a9ad27da255062",
+  "toolchain": {
+    "pyevm": "0.12.1b1",
+    "eth_tester": "0.13.0b1",
+    "eth_account": "0.13.7"
+  },
+  "initial_state": "owner is deployer, distinct actor; each vault starts funded with 100 wei",
+  "interpretation": "Authored initialized scenarios and correlated compiler builds, not independent benchmark vulnerabilities.",
+  "configurations": [
+    {
+      "config": "legacy-plain",
+      "compiler_sha256": "6bd9bb0a601e791692358037b5558deba15f970d82de56d030c6eab0d1e28d67",
+      "settings": {
+        "optimizer": {
+          "enabled": false,
+          "runs": 200
+        },
+        "evmVersion": "berlin",
+        "outputSelection": {
+          "*": {
+            "*": [
+              "abi",
+              "evm.bytecode.object",
+              "evm.deployedBytecode.object"
+            ]
+          }
+        }
+      },
+      "vm": "PragueVM",
+      "cases": {
+        "OpenCaller": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "cc626f17144550f99065b187b5c2223ed754ba123b5371a750019e2493034f79",
+          "runtime_bytes": 566
+        },
+        "GuardedCaller": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "c98cbb1c4741b2d34f6ff33d052f147d4adfe79da28fd1ce550914edf9b397b7",
+          "runtime_bytes": 654
+        },
+        "NeighborField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "b0d8a60bca403ff133f954084b970923f5fe1c72366ab5abe7d27d8a6b28d72b",
+          "runtime_bytes": 701
+        },
+        "ShiftedField": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "339a5e3598942f9e2f1b42b6b0bcb1630cbf1fbcdf2ab9bbe5debe283de8c6d9",
+          "runtime_bytes": 719
+        },
+        "OpenParameter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "e1396a6f280f22ab9342ea20607042e9684c52b4340c55cc6037245f84f2a4dc",
+          "runtime_bytes": 670
+        },
+        "Initialized": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "3dfc58f640f7900b1f0d75355c647e0cc2ac5423b01bb9a215e21263a651d69e",
+          "runtime_bytes": 746
+        },
+        "TwoCredentials": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "6a5545027e4da1fc50d22dccfa9a05a8a5947e8f763dca018a44f9fd2c877ede",
+          "runtime_bytes": 748
+        },
+        "NoSetter": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "033e8a84dbf4c6cd4d23728df3ae49488c97a5ef26decac655e7aee3681be84f",
+          "runtime_bytes": 502
+        },
+        "PartialField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "59518a7d747211d71c5a8e405f54eb4b982af81078a48793e6efc4a667c91b34",
+          "runtime_bytes": 517
+        },
+        "ExternalSetter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "9a114414f9d19f5fad5f1d0b6f59cdfb41bd66f010630b6fc944f478b7fd6082",
+          "runtime_bytes": 858
+        }
+      },
+      "account_context": {
+        "direct_status": 1,
+        "ordinary_forwarder_status": 0,
+        "authorization_status": 1,
+        "delegated_self_call_status": 1,
+        "probe_count": 2,
+        "observed_caller_code_bytes": 23,
+        "delegation_code": "0xef01006595b34ed0a270b10a586fc1ea22030a95386f1e"
+      }
+    },
+    {
+      "config": "legacy-opt",
+      "compiler_sha256": "6bd9bb0a601e791692358037b5558deba15f970d82de56d030c6eab0d1e28d67",
+      "settings": {
+        "optimizer": {
+          "enabled": true,
+          "runs": 200
+        },
+        "evmVersion": "berlin",
+        "outputSelection": {
+          "*": {
+            "*": [
+              "abi",
+              "evm.bytecode.object",
+              "evm.deployedBytecode.object"
+            ]
+          }
+        }
+      },
+      "vm": "PragueVM",
+      "cases": {
+        "OpenCaller": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "48b35c918103c6fa938bddff3c3104e8cd51b1f0bc23405484b9025854fb1502",
+          "runtime_bytes": 297
+        },
+        "GuardedCaller": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "28b31c727101290a460e007e7a5b443b482de18e890dd94d4c549b7a89c757a8",
+          "runtime_bytes": 339
+        },
+        "NeighborField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "f376042343c68a03f17a3e5af21de71af71620cbc16912260e39a7913556bfd3",
+          "runtime_bytes": 397
+        },
+        "ShiftedField": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "309963a4492b24e77bc0fbe0b95ebf022934f5c4435a1de1c4b81074b710df83",
+          "runtime_bytes": 395
+        },
+        "OpenParameter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "4563a65d64a89c83ebd12d9601e3647149bfaacc18ab47554d4ef639eeba9cd6",
+          "runtime_bytes": 382
+        },
+        "Initialized": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "23e1ab2c23b9200ba3cad7347785661e39f48714dca0b1d4f22dfff25e544028",
+          "runtime_bytes": 415
+        },
+        "TwoCredentials": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "97d37ff2ccd029a703f3f5400f9d2650ff32886d469ab9dd4a0caf8bbdebdd8d",
+          "runtime_bytes": 377
+        },
+        "NoSetter": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "8d8376b6a7ca6f939510f70386cf1e3141ed6303b84bb5b57d2c7521c5a2c117",
+          "runtime_bytes": 277
+        },
+        "PartialField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "a1cfc748f671d373ca60d70640d06f5dce921c64bf849e17ca9c37c58aaffd07",
+          "runtime_bytes": 294
+        },
+        "ExternalSetter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "f51972c5e410380bd79265708d795aedf8d3bb4dd3d2a291385c1b66dd027bee",
+          "runtime_bytes": 466
+        }
+      },
+      "account_context": {
+        "direct_status": 1,
+        "ordinary_forwarder_status": 0,
+        "authorization_status": 1,
+        "delegated_self_call_status": 1,
+        "probe_count": 2,
+        "observed_caller_code_bytes": 23,
+        "delegation_code": "0xef01006595b34ed0a270b10a586fc1ea22030a95386f1e"
+      }
+    },
+    {
+      "config": "modern-plain",
+      "compiler_sha256": "3fb6699791d7eb9d8cb28168116cc9b5eca9f2bec1ec356f7d66034d91035e9b",
+      "settings": {
+        "optimizer": {
+          "enabled": false,
+          "runs": 200
+        },
+        "evmVersion": "prague",
+        "outputSelection": {
+          "*": {
+            "*": [
+              "abi",
+              "evm.bytecode.object",
+              "evm.deployedBytecode.object"
+            ]
+          }
+        },
+        "viaIR": false
+      },
+      "vm": "PragueVM",
+      "cases": {
+        "OpenCaller": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "291ae110c4d2ce2fd81a84f9cbda4337296d846a6b8a1a26650df5ac9ad01808",
+          "runtime_bytes": 552
+        },
+        "GuardedCaller": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "0cc304f30212df56deacf7ccda4b3ee8816193ce27df3e23825595c28dafaf76",
+          "runtime_bytes": 639
+        },
+        "NeighborField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "275ae35c46b5d398e4f82409f9f4f083271170d5b92d2c861de0032206e7f022",
+          "runtime_bytes": 682
+        },
+        "ShiftedField": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "cfa7a8e3929f6426523db25ff07a4ffba59c55c720cb86447e1ac06f20654741",
+          "runtime_bytes": 699
+        },
+        "OpenParameter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "bc007b741b57b1b6fdfa4d8bb4e977d2f682fbbf7bce61d42d49191980499076",
+          "runtime_bytes": 660
+        },
+        "Initialized": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "26cec2ea7ab4e7c5100aa79dba51c2bcc9a8911af938c8992d96a4d94092790a",
+          "runtime_bytes": 724
+        },
+        "TwoCredentials": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "1329c0513f1b883731534ff870c2d5c99b1e1fa542b40c94b28743a9c9fa0bc1",
+          "runtime_bytes": 730
+        },
+        "NoSetter": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "77646a3a80e2a0c2f631d4deea249f8117468e303962a6481f497d9144f07094",
+          "runtime_bytes": 489
+        },
+        "PartialField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "3c71f0b07e12f9b4be2dabf1603a9995a2f15303f26d9cdc8e1c0d8d72c4a29f",
+          "runtime_bytes": 502
+        },
+        "ExternalSetter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "880ed3dcc61c76b2beabaf2ac6fe37265dc0dedc1ca925ac27bcbcb590d172bb",
+          "runtime_bytes": 837
+        }
+      },
+      "account_context": {
+        "direct_status": 1,
+        "ordinary_forwarder_status": 0,
+        "authorization_status": 1,
+        "delegated_self_call_status": 1,
+        "probe_count": 2,
+        "observed_caller_code_bytes": 23,
+        "delegation_code": "0xef01006595b34ed0a270b10a586fc1ea22030a95386f1e"
+      }
+    },
+    {
+      "config": "modern-opt",
+      "compiler_sha256": "3fb6699791d7eb9d8cb28168116cc9b5eca9f2bec1ec356f7d66034d91035e9b",
+      "settings": {
+        "optimizer": {
+          "enabled": true,
+          "runs": 200
+        },
+        "evmVersion": "prague",
+        "outputSelection": {
+          "*": {
+            "*": [
+              "abi",
+              "evm.bytecode.object",
+              "evm.deployedBytecode.object"
+            ]
+          }
+        },
+        "viaIR": false
+      },
+      "vm": "PragueVM",
+      "cases": {
+        "OpenCaller": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "80b688d2d143c960fcbe70f4b56247567c54ecc4c8bd05eb1589f496d1069128",
+          "runtime_bytes": 284
+        },
+        "GuardedCaller": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "04e7de2973d3d1049314f805955b14f9c2c0829bdd443cf2f66f42848f48eb39",
+          "runtime_bytes": 308
+        },
+        "NeighborField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "a454cd44dd83e8fee1745e9d56a51190a1c6857d8dbd726765eab0bbfeaeda3f",
+          "runtime_bytes": 382
+        },
+        "ShiftedField": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "e12cc7effde997dffb01315c3f13f130e9af48b41b87806d2b5c27ae0e86ccd3",
+          "runtime_bytes": 380
+        },
+        "OpenParameter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "176335004365761fdb40e707027e4f69db1a44c52bdb43be0e7f795743a657a4",
+          "runtime_bytes": 368
+        },
+        "Initialized": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "8a16767e997e80fc264abb499d496d90c9771280e72dd38817415389197908f1",
+          "runtime_bytes": 398
+        },
+        "TwoCredentials": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "5b4424d32524902c65b5c719f6edd4a551c26740d2e39d823021f5371e7adeaf",
+          "runtime_bytes": 362
+        },
+        "NoSetter": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "0e54e9309f158e56631f813c73aec2dbf66e6b563c7da4194ea80ded779fb30d",
+          "runtime_bytes": 262
+        },
+        "PartialField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "3ff89b005a9077d9312bd543fad5e390daa0acfe7b121f919066e83d1d82d097",
+          "runtime_bytes": 280
+        },
+        "ExternalSetter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "9a2c647c8e0a6617cffccd8d405acf1869884a02a15b670d32b8b652d2ac2eb0",
+          "runtime_bytes": 448
+        }
+      },
+      "account_context": {
+        "direct_status": 1,
+        "ordinary_forwarder_status": 0,
+        "authorization_status": 1,
+        "delegated_self_call_status": 1,
+        "probe_count": 2,
+        "observed_caller_code_bytes": 23,
+        "delegation_code": "0xef01006595b34ed0a270b10a586fc1ea22030a95386f1e"
+      }
+    },
+    {
+      "config": "modern-ir",
+      "compiler_sha256": "3fb6699791d7eb9d8cb28168116cc9b5eca9f2bec1ec356f7d66034d91035e9b",
+      "settings": {
+        "optimizer": {
+          "enabled": true,
+          "runs": 200
+        },
+        "evmVersion": "prague",
+        "outputSelection": {
+          "*": {
+            "*": [
+              "abi",
+              "evm.bytecode.object",
+              "evm.deployedBytecode.object"
+            ]
+          }
+        },
+        "viaIR": true
+      },
+      "vm": "PragueVM",
+      "cases": {
+        "OpenCaller": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "56636df9581ce5469513afbdb8db0062309616ff835381d0b17981169c927b6d",
+          "runtime_bytes": 255
+        },
+        "GuardedCaller": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "2b93587056d70aea11e7095f1d81d3ecf23bd2bbaa4d4f2a60e0ec661ba056e8",
+          "runtime_bytes": 269
+        },
+        "NeighborField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "c474be91380acc7035783ba399220cc363058e0aee3b466c6da27a9f42b1cf34",
+          "runtime_bytes": 306
+        },
+        "ShiftedField": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "8b5001dc739413571ca1322f6b8b47faa1d13ec14d35169f72ff9af6fe5e6c9f",
+          "runtime_bytes": 331
+        },
+        "OpenParameter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "b750bb54a73f384be7392bef6434506fdfbc9d231ac0ac96f41ee072f4be6217",
+          "runtime_bytes": 283
+        },
+        "Initialized": {
+          "claim_status": 0,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "d3fe1c8e120de167d56017c630b35dc95125dcb71464db4ad9229c0b932d4364",
+          "runtime_bytes": 347
+        },
+        "TwoCredentials": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "969b3b7d0dfb05db79020f731bab96ed9214cab502464a5e7da6843c22d3acf2",
+          "runtime_bytes": 339
+        },
+        "NoSetter": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "1c02daf1c70f80cc0e8638c6af635e4e973f564915901a3f5c142d33215a2701",
+          "runtime_bytes": 238
+        },
+        "PartialField": {
+          "claim_status": 1,
+          "withdraw_status": 0,
+          "contract_value_delta": 0,
+          "actor_can_take_funded_value": false,
+          "runtime_sha256": "0b83d43dc4e2fe32689c6c752bbdbb81b89c216560023839c8a7d00adac3cd88",
+          "runtime_bytes": 252
+        },
+        "ExternalSetter": {
+          "claim_status": 1,
+          "withdraw_status": 1,
+          "contract_value_delta": -100,
+          "actor_can_take_funded_value": true,
+          "runtime_sha256": "42cc7435c72a972e79e62754fb13fbc50eee98b9042e317fcad71cf19afee568",
+          "runtime_bytes": 402
+        }
+      },
+      "account_context": {
+        "direct_status": 1,
+        "ordinary_forwarder_status": 0,
+        "authorization_status": 1,
+        "delegated_self_call_status": 1,
+        "probe_count": 2,
+        "observed_caller_code_bytes": 23,
+        "delegation_code": "0xef01006595b34ed0a270b10a586fc1ea22030a95386f1e"
+      }
+    }
+  ],
+  "problems": []
+}

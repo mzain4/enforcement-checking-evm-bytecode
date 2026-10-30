@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using this implementation or experimental material."
+type: software
+title: "Dependency-Aware Security Enforcement Checking for Ethereum Bytecode"
+version: 1.0.0
+date-released: 2026-10-30
+license: MIT
+authors:
+  - family-names: "Ul Abidin"
+    given-names: "Muhammad Zain"
+    email: "mzain.mz4@gmail.com"
+    affiliation: "Department of Computer Science, University of Management and Technology, Lahore (Sialkot Campus), Pakistan"
+  - family-names: "Hussain"
+    given-names: "Imtiaz"
+    email: "imtiaz.hussain@skt.umt.edu.pk"
+    affiliation: "Department of Computer Science, University of Management and Technology, Lahore (Sialkot Campus), Pakistan"
+  - family-names: "Alam"
+    given-names: "Intakhab"
+    email: "intakhab.alam@skt.umt.edu.pk"
+    affiliation: "Department of Computer Science, University of Management and Technology, Lahore (Sialkot Campus), Pakistan"
+  - family-names: "ur Rehman"
+    given-names: "Syed Shakeel"
+    email: "shakeelrizvi94@yahoo.com"
+    affiliation: "Department of Computer Science, University of Management and Technology, Lahore (Sialkot Campus), Pakistan"
+preferred-citation:
+  type: unpublished
+  title: "Dependency-Aware Security Enforcement Checking for Ethereum Bytecode"
+  year: 2026
+  authors:
+    - family-names: "Ul Abidin"
+      given-names: "Muhammad Zain"
+    - family-names: "Hussain"
+      given-names: "Imtiaz"
+    - family-names: "Alam"
+      given-names: "Intakhab"
+    - family-names: "ur Rehman"
+      given-names: "Syed Shakeel"

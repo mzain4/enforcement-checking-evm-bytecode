@@ -1,0 +1,142 @@
+{
+  "algebra_cases": [
+    {
+      "assignments_checked": 65536,
+      "protected_bits_can_change": false,
+      "protected_mask": "0xf",
+      "write_mask": "0xf0"
+    },
+    {
+      "assignments_checked": 65536,
+      "protected_bits_can_change": false,
+      "protected_mask": "0xf0",
+      "write_mask": "0xf"
+    },
+    {
+      "assignments_checked": 65536,
+      "protected_bits_can_change": true,
+      "protected_mask": "0xf",
+      "write_mask": "0x3"
+    },
+    {
+      "assignments_checked": 65536,
+      "protected_bits_can_change": true,
+      "protected_mask": "0xf0",
+      "write_mask": "0x30"
+    }
+  ],
+  "changed_rows": [
+    {
+      "authored_fixture": "packed_neighbor",
+      "credential_off": "negative",
+      "declared_development_expectation": "negative",
+      "field_sensitive": "negative",
+      "word_mask_coarsened": "positive"
+    },
+    {
+      "authored_fixture": "partial_field",
+      "credential_off": "negative",
+      "declared_development_expectation": "negative",
+      "field_sensitive": "negative",
+      "word_mask_coarsened": "positive"
+    }
+  ],
+  "fixture_rows": [
+    {
+      "authored_fixture": "caller_setter",
+      "credential_off": "negative",
+      "declared_development_expectation": "positive",
+      "field_sensitive": "positive",
+      "word_mask_coarsened": "positive"
+    },
+    {
+      "authored_fixture": "calldata_setter",
+      "credential_off": "negative",
+      "declared_development_expectation": "positive",
+      "field_sensitive": "positive",
+      "word_mask_coarsened": "positive"
+    },
+    {
+      "authored_fixture": "shifted_setter",
+      "credential_off": "negative",
+      "declared_development_expectation": "positive",
+      "field_sensitive": "positive",
+      "word_mask_coarsened": "positive"
+    },
+    {
+      "authored_fixture": "multiply_setter",
+      "credential_off": "negative",
+      "declared_development_expectation": "positive",
+      "field_sensitive": "positive",
+      "word_mask_coarsened": "positive"
+    },
+    {
+      "authored_fixture": "guarded_setter",
+      "credential_off": "negative",
+      "declared_development_expectation": "negative",
+      "field_sensitive": "negative",
+      "word_mask_coarsened": "negative"
+    },
+    {
+      "authored_fixture": "fixed_guard_setter",
+      "credential_off": "negative",
+      "declared_development_expectation": "negative",
+      "field_sensitive": "negative",
+      "word_mask_coarsened": "negative"
+    },
+    {
+      "authored_fixture": "packed_neighbor",
+      "credential_off": "negative",
+      "declared_development_expectation": "negative",
+      "field_sensitive": "negative",
+      "word_mask_coarsened": "positive"
+    },
+    {
+      "authored_fixture": "no_setter",
+      "credential_off": "negative",
+      "declared_development_expectation": "negative",
+      "field_sensitive": "negative",
+      "word_mask_coarsened": "negative"
+    },
+    {
+      "authored_fixture": "two_credentials",
+      "credential_off": "negative",
+      "declared_development_expectation": "negative",
+      "field_sensitive": "negative",
+      "word_mask_coarsened": "negative"
+    },
+    {
+      "authored_fixture": "initialization_gate",
+      "credential_off": "negative",
+      "declared_development_expectation": "unknown",
+      "field_sensitive": "unknown",
+      "word_mask_coarsened": "unknown"
+    },
+    {
+      "authored_fixture": "external_call_setter",
+      "credential_off": "negative",
+      "declared_development_expectation": "unknown",
+      "field_sensitive": "unknown",
+      "word_mask_coarsened": "unknown"
+    },
+    {
+      "authored_fixture": "partial_field",
+      "credential_off": "negative",
+      "declared_development_expectation": "negative",
+      "field_sensitive": "negative",
+      "word_mask_coarsened": "positive"
+    },
+    {
+      "authored_fixture": "or_unknown_storage",
+      "credential_off": "negative",
+      "declared_development_expectation": "negative",
+      "field_sensitive": "negative",
+      "word_mask_coarsened": "negative"
+    }
+  ],
+  "passed": true,
+  "reused_authored_fixtures": 13,
+  "scope": "existing authored fixtures plus8-bit exhaustive update algebra; not independent natural data, native Ethainter or whole-checker soundness",
+  "toy_assignments_checked": 262144,
+  "word_ablation_source_sha256": "4648c258a410688f4b1ebda74810594fcd8ccab0750c76a6c1604a46ec9d22b8"
+}

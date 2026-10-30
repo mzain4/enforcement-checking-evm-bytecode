@@ -1,0 +1,23 @@
+{
+  "language": "Solidity",
+  "settings": {
+    "evmVersion": "berlin",
+    "optimizer": {
+      "enabled": false
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object"
+        ]
+      }
+    }
+  },
+  "sources": {
+    "IdentityProbe.sol": {
+      "content": "pragma solidity ^0.8.4;\n\ncontract IdentityProbe {\n    bool public lastSuccess;\n    bytes32 public lastCopy;\n\n    function probe(uint256 forwardedGas, uint256 words, bool enforce) external returns (bool ok) {\n        bytes32 copied;\n        assembly {\n            mstore(0, 0xfeed00000000000000000000000000000000000000000000000000000000beef)\n            mstore(128, 0)\n            ok := call(forwardedGas, 4, 0, 0, mul(words, 32), 128, mul(words, 32))\n            copied := mload(128)\n        }\n        if (enforce) require(ok, \"identity call failed\");\n        lastSuccess = ok;\n        lastCopy = copied;\n    }\n}\n"
+    }
+  }
+}

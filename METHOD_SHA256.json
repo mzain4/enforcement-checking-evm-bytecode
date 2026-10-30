@@ -1,0 +1,22 @@
+{
+  "files": {
+    "implementation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "implementation/enforcement/__init__.py": "10bae6e7191a77a2cd77cd5e4f9ee7abc4ac6434f7d038a7f6cca583d57ea67a",
+    "implementation/enforcement/abi_binding.py": "d72103ebd260bd5c3828a4dbc466bfa38e9995b064fafa694407a190963b157f",
+    "implementation/enforcement/cli.py": "f67ddf6b304a7596c8e8697acef9e492821d3f66245353bc74a1be78bc24a526",
+    "implementation/enforcement/dynamic_array_binding.py": "65616ca938e00aa949b59f29f6297c3857e0eb88a9c8587bb84f10fba99c94fc",
+    "implementation/enforcement/engine.py": "268c1ff0ac0bee116ac94b587e4b6d64904722de6d8ebca1eac2efea63f75867",
+    "implementation/enforcement/facts.py": "849328a8697904d36bd6a7b81d31075111463dde9183892a6f2b6f9164e32859",
+    "implementation/enforcement/storage_model.py": "4b241180345eed95b29233953caf9ab9dbaecd909cf1e6ca186122d9e82acb50",
+    "implementation/enforcement/token_authority.py": "d0ef76e6163a77727b2b7fe878072fc70f75818a994226e4444066b4bb688b4c",
+    "implementation/enforcement_next/__init__.py": "626ba4e1ff3b470198607ac2e7d18055dad28b153dee4109fe3d02b2f054de46",
+    "implementation/enforcement_next/analyze.py": "3036b3eceb8c7a4b46e69ff0fa94981d7c936e42f2695b11b88590b0da6a3383",
+    "implementation/enforcement_next/cli.py": "71963980cfc363e8709d4f2c0da3debd38a7bc2fd1710b02349259b536fd5f1b",
+    "implementation/enforcement_next/control_suite.py": "88206cd5041ada94995fe3b2a8ffc99cd88be7f243e43476b25398927a4d3108",
+    "implementation/enforcement_next/controls.py": "a8e7babe20aef9308ff7c24a8926db455d39c4296a1a1a407707c265266c5ffa",
+    "implementation/enforcement_next/rules.py": "e0b9aa4e27741cc399baf54742ebdb27f74a8b2f79f1cce03d385941e9b886f1",
+    "implementation/enforcement_next/tac.py": "d31c58cf9ef432a0f3d5a1cc943ca869433de472a4def75e3097b35c7ac30364",
+    "implementation/enforcement_state/__init__.py": "f37acde85e70399c7ec3935ea40a574059c0b47c8abcf94ab196bfcb9725748f",
+    "implementation/enforcement_state/analyze.py": "b021fbf6ff8893d295f34b911d47fa1d18f23e7de4871674ae02160297746cee"
+  }
+}
